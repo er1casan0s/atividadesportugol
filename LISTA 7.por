@@ -1,5 +1,9 @@
+
+
 programa {
+  inclua biblioteca Util --> u
   funcao inicio() {
+    inteiro numero
     inteiro opcao
 
     faca{
@@ -43,12 +47,12 @@ programa {
 
     //Questão 3
     caso 3:
-      inteiro numero
+      inteiro num
 
       escreva("Olá, digite um número: ")
-      leia(numero)
+      leia(num)
 
-      se(numero %2==0){
+      se(num %2==0){
           escreva("o número é PAR!\n")
       }senao{
         escreva("O número é ÍMPAR!\n")
@@ -162,12 +166,14 @@ programa {
 
     pare
 
-    //Questão 6
+    //Questão 6 (random)
       caso 6:
-      inteiro numero
+      //inteiro numero
+      
         
-      escreva("\nSelecione um número de 1 a 6: ")
-      leia(numero)
+      escreva("\ngirando o dado...\n")
+    
+       numero = u.sorteia(1,6)
         escolha(numero){
         caso 1:
           escreva("SAIU UM!\n")
